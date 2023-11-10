@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>house</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+        .navbar {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-image: url("{% static 'image1.png'%}");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        nav{
+            display: flex;
+            width: 84%;
+            margin: auto;
+            padding: 20px 0;
+            align-items: center;
+            justify-content: space-between;
+            color: azure;
+        }
+        nav ul li {
+            display: inline-block;
+            list-style: none;
+            margin: 10px 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            color: red;
+        }
+        .details {
+            margin-left: 8%;
+            margin-top: 12%;
+        }
+        .details h1
+        {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: azure;
+        }
+        .details p {
+            color: rgb(0, 0, 0);
+            line-height: 22px;
+        }
+        .details form  input[type=submit] {
+            background-color: black;
+            padding: 10px 8px;
+            font-weight: bold;
+            color: white;
+            display: inline-block;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+        .images {
+            width: 70%;
+            height: 80%;
+            position: absolute;
+            bottom: 0;
+            right: 100px;
+        }
+        .images img {
+            height: 250px;
+            position: absolute;
+            left: 50%;
+            top: 120px;
+        }
+        span
+        {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <nav>
+            <h1>HOP<span>RED</span>🏡</h1>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+            </ul>
+        </nav>
+        <hr style="color: black;">
+        <div class="details">
+            <h1>House Price Prediction App</h1>
+            <p><span style="color: black; font-weight: bolder;">Hopred is House Price Prediction App.</span>
+                The main aim of the project is to build <br> an app that can predict house prices depending on various
+                perspective and the <br> features of the house that one wants to buy for example; how many bedrooms <br> the buyer
+                wants or does the buyer wants an air-conditioning, basement etc. <br> The project will be based on a housing
+                dataset, in which the dataset will be <br> analyzed and predicted using various machine learning models and
+                python <br> programming language.
+            </p>
+            <form action="predict">
+                <input type="submit" value="START" name="result">
+            </form>
+        </div>
+        <div class="images">
+            <img src="{% static 'housing.png' %}" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
