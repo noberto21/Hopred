@@ -1,14 +1,121 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>result</title>
-</head>
-<body>
-    <h3>{{result2}}</h3><br>
-    
-    <a href="{% url 'home' %}"><input type="submit" value="HOME" ></a>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <title>predict</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            
+        }
 
+        body {
+            background-image: url("{%static 'image1.png'%}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: 'Poppins',sans-serif;
+        }
+
+        nav {
+            display: flex;
+            width: 84%;
+            margin: auto;
+            padding: 20px 0;
+            align-items: center;
+            justify-content: space-between;
+            color: azure;
+        }
+
+        nav ul li {
+            display: inline-block;
+            list-style: none;
+            margin: 10px 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: red;
+        }
+
+        input[type=number],
+        select {
+            width: 20%;
+            padding: 5px 2px;
+            margin: 5px 0;
+            display: inline-block;
+            border: 1px solid black;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        p {
+            font-size: 12.5px;
+            color: rgb(0, 0, 0);
+            font-weight: bolder;
+        }
+
+        .main {
+            border-radius: 5px;
+            background-color: gray;
+            padding: 10px;
+            margin: 10px;
+            opacity: 0.85;
+        }
+
+        input[type=submit] {
+            width: 20%;
+            padding: 10px 10px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            color: red;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: auto auto;
+
+        }
+
+        h3 {
+            margin: 10px;
+            color: white;
+        }
+
+        h1 {
+            margin-left: 10px;
+        }
+        span
+        {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h1>HOP<span>RED</span>🏡</h1>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="About">About</a></li>
+        </ul>
+    </nav>
+    <hr>
+
+    <h3>{{result2}}</h3><br>
+
+    </div>
 </body>
-</html>
+
